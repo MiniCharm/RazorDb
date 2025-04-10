@@ -1,0 +1,43 @@
+﻿@page
+@model RazorDb.Pages.Hotels.UpdateHotelModel
+@{
+    ViewData["Titel"] = "UpdateHotel";
+}
+
+<head>
+    <style>
+        div {width:50%}
+    </style>
+</head>
+<form method="post">
+    <br />
+    <div class="form-group">
+        <label asp-for="@Model.hotel.HotelNr" class="control-label"></label>
+        <input asp-for="@Model.hotel.HotelNr" readonly class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.hotel.Navn" class="control-label"></label>
+        <input asp-for="@Model.hotel.Navn" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.hotel.Adresse" class="control-label"></label>
+        <input asp-for="@Model.hotel.Adresse" class="form-control" />
+    </div>
+    <br />
+    <div class="formgroup">
+        <input 
+            type="submit" 
+            value="UpdateHotel " 
+            class="btn btn-primary" 
+            style="background-color:#ffa303;border-color:#ffa303"
+        />
+    </div>
+</form>
+<br />
+<br />
+<br />
+<a asp-page="GetAllHotels" class="btn btn-primary" style="background-color:lightgray;border-radius: 12px;margin-left: 50px;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+    </svg> Back to Hotels
+</a>

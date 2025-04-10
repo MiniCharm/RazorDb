@@ -1,0 +1,42 @@
+﻿@page
+@model RazorDb.Pages.Test.DeleteRoomsModel
+@{
+    ViewData["Titel"] = "DeleteRoom";
+}
+
+<h1>Slet værelse</h1>
+
+<hr />
+<form method="post" enctype="multipart/form-data">
+    <br />
+    <div class="form-grpup">
+        <label asp-for="@Model.room.RoomNr" class"controle-label"></label>
+        <input asp-for="@Model.room.RoomNr" readonly class="form-control" />
+        <span asp-validation-for="room.RoomNr"  class="text-danger"></span>
+    </div>
+    <div class="form-grpup">
+        <label asp-for="@Model.room.HotelNr" class"controle-label"></label>
+        <input asp-for="@Model.room.HotelNr" readonly class="form-control" />
+        <span asp-validation-for="room.HotelNr"  class="text-danger"></span>
+    </div>
+    <div class="form-grpup">
+        <label asp-for="@Model.room.Types" class"controle-label"></label>
+        <input asp-for="@Model.room.Types" readonly class="form-control" />
+        <span asp-validation-for="room.Types"  class="text-danger"></span>
+    </div>
+    <div class="form-grpup">
+        <label asp-for="@Model.room.Pris" class"controle-label"></label>
+        <input asp-for="@Model.room.Pris" readonly class="form-control" />
+        <span asp-validation-for="room.Pris"  class="text-danger"></span>
+    </div>
+    <br>
+    <br />
+    <div class="formgroup">
+        <input 
+            type="submit" 
+            value="Delete Room" 
+            class="btn btn-primary" 
+            style="background-color:#ff035f;border-color:#ff035f" />
+    </div>
+</form>
+
